@@ -1,1 +1,25 @@
+/* =========================================================
+   EQUIPO — datos editables
+   Cambia estos datos de ejemplo por tu equipo real.
+   ========================================================= */
 
+const FOUNDERS = [
+  {
+    initials: "SM",
+    name: "Founder 1",
+    role: "Owner & Founder",
+    desc: "Fundador del proyecto, a cargo de la direccion general de Sandeo."
+  },
+  {
+    initials: "SV",
+    name: "Founder 2",
+    role: "Owner & Founder",
+    desc: "Co-fundador, encargado del desarrollo del juego y del salon."
+  }
+];
+
+const ADMINS = [
+  { initials: "AD", name: "Admin 1", user: "@admin1", role: "Administrador" },
+  { initials: "MD", name: "Moderador 1", user: "@mod1", role: "Moderador" },
+  { initials: "MD", name: "Moderador 2", user: "@mod2", role: "Moderador" }
+];
