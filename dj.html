@@ -1,1 +1,49 @@
---PRONTO
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona DJ · Sandeo Nightclub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/dj.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-tag">SANDEO</a>
+  <div class="nav-links">
+    <a href="index.html#sobre">Sobre el Salon</a>
+    <a href="dj.html" class="active">Zona DJ</a>
+    <a href="index.html#tienda">Tienda</a>
+    <a href="index.html#reservaciones">Reservaciones</a>
+  </div>
+</nav>
+
+<section class="dj-page">
+  <div class="dj-header">
+    <p class="eyebrow">Zona DJ</p>
+    <h1>Encuentra tu sonido</h1>
+    <p>Elige un genero, copia el ID de la cancion y ponla directo en el panel de musica del juego.</p>
+  </div>
+
+  <!-- VISTA 1: categorias -->
+  <div class="dj-categories" id="djCategories"></div>
+
+  <!-- VISTA 2: lista de canciones de la categoria elegida -->
+  <div class="dj-songs-view" id="djSongsView">
+    <button class="dj-back" id="djBack">&larr; Volver a generos</button>
+    <h2 class="dj-songs-title">
+      <span class="dj-songs-dot" id="djSongsDot"></span>
+      <span id="djSongsTitle">Genero</span>
+    </h2>
+    <div id="djSongsList"></div>
+  </div>
+</section>
+
+<script src="assets/dj-data.js"></script>
+<script src="assets/dj.js"></script>
+</body>
+</html>
