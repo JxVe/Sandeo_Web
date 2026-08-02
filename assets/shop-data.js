@@ -5,22 +5,22 @@
    ========================================================= */
 
 const SHOP_ITEMS = [
-  { image: "https://placehold.co/400x400/1a1024/c084fc?text=VIP", name: "VIP",
+  { image: "https://picsum.photos/seed/sandeo-vip/400/400", name: "VIP",
     desc: "Acceso a la zona VIP y beneficios dentro del salon.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/9b5de5?text=Super+VIP", name: "Super VIP",
+  { image: "https://picsum.photos/seed/sandeo-supervip/400/400", name: "Super VIP",
     desc: "Todo lo de VIP, mas beneficios exclusivos adicionales.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/4cc9f0?text=DJ+Pass", name: "DJ Pass",
+  { image: "https://picsum.photos/seed/sandeo-djpass/400/400", name: "DJ Pass",
     desc: "Sube a la tarima y controla la musica del salon.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/e0546b?text=Name+Tag", name: "Name Tag",
+  { image: "https://picsum.photos/seed/sandeo-nametag/400/400", name: "Name Tag",
     desc: "Personaliza la etiqueta con tu nombre en el juego.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/f77f00?text=Aura", name: "Aura",
+  { image: "https://picsum.photos/seed/sandeo-aura/400/400", name: "Aura",
     desc: "Efecto de aura visual alrededor de tu personaje.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/4cc9f0?text=Comandos", name: "Comandos",
+  { image: "https://picsum.photos/seed/sandeo-comandos/400/400", name: "Comandos",
     desc: "Desbloquea comandos especiales dentro del salon.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/9b5de5?text=HL", name: "HL",
+  { image: "https://picsum.photos/seed/sandeo-hl/400/400", name: "HL",
     desc: "Modelo headless (sin cabeza) para tu personaje.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/c084fc?text=Radio", name: "Radio",
+  { image: "https://picsum.photos/seed/sandeo-radio/400/400", name: "Radio",
     desc: "Reproduce tu musica favorita donde quieras.", link: "#" },
-  { image: "https://placehold.co/400x400/1a1024/e0546b?text=Bailes", name: "Bailes Exclusivos",
+  { image: "https://picsum.photos/seed/sandeo-bailes/400/400", name: "Bailes Exclusivos",
     desc: "Animaciones de baile unicas para destacar.", link: "#" }
 ];
