@@ -286,9 +286,244 @@
     .cta-row{ flex-direction:column; width:100%; }
     .btn{ justify-content:center; }
   }
+
+  /* ---------- NOTICIAS (popup) ---------- */
+  .news-overlay{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    background:rgba(3,3,6,0.86);
+    backdrop-filter:blur(10px);
+    animation:overlayIn .5s ease both;
+  }
+  .news-overlay.hidden{ display:none; }
+  @keyframes overlayIn{ from{ opacity:0; } to{ opacity:1; } }
+
+  .news-card{
+    position:relative;
+    width:min(560px, 100%);
+    background:linear-gradient(180deg, var(--bg-soft), #08080d);
+    border:1px solid rgba(155,93,229,0.25);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03) inset;
+    animation:cardIn .55s cubic-bezier(.16,1,.3,1) both;
+  }
+  @keyframes cardIn{
+    from{ opacity:0; transform:translateY(30px) scale(.97); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
+  }
+
+  .news-media{
+    position:relative;
+    height:220px;
+    background:
+      radial-gradient(ellipse 70% 60% at 30% 20%, rgba(155,93,229,0.55), transparent 60%),
+      radial-gradient(ellipse 60% 60% at 80% 80%, rgba(192,132,252,0.35), transparent 60%),
+      linear-gradient(160deg, #1a1024, #050507);
+  }
+  .news-media::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 50%, var(--bg-soft) 100%);
+  }
+  .news-version{
+    position:absolute;
+    top:16px; left:18px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.12em;
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    backdrop-filter:blur(4px);
+  }
+  .news-close{
+    position:absolute;
+    top:14px; right:14px;
+    width:32px; height:32px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.18);
+    background:rgba(0,0,0,0.35);
+    color:var(--chrome-light);
+    font-size:16px;
+    line-height:1;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background .2s, transform .2s;
+  }
+  .news-close:hover{ background:rgba(155,93,229,0.35); transform:scale(1.06); }
+
+  .news-body{ padding:26px 28px 24px; }
+  .news-title{
+    font-family:var(--font-display);
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .news-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .news-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+    color:var(--chrome-mid);
+    line-height:1.4;
+  }
+  .news-list li::before{
+    content:'';
+    width:5px;height:5px;
+    margin-top:7px;
+    border-radius:50%;
+    background:var(--violet-glow);
+    flex-shrink:0;
+    box-shadow:0 0 6px var(--violet-glow);
+  }
+
+  .news-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .news-dots{ display:flex; gap:8px; }
+  .news-dot{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.18);
+    border:none;
+    cursor:pointer;
+    padding:0;
+    transition:background .2s, transform .2s;
+  }
+  .news-dot.active{ background:var(--violet-glow); transform:scale(1.2); }
+
+  .news-enter{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:13px;
+    color:#fff;
+    background:linear-gradient(135deg, var(--violet), var(--violet-deep));
+    border:none;
+    padding:10px 20px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .news-enter:hover{ transform:translateY(-1px); box-shadow:0 6px 20px rgba(155,93,229,0.5); }
+
+  /* ---------- SOBRE EL SALON ---------- */
+  .about{
+    position:relative;
+    padding:110px 6vw 120px;
+    background:var(--bg-soft);
+    overflow:hidden;
+  }
+  .about::before{
+    content:'';
+    position:absolute;
+    top:-20%; left:50%;
+    width:900px; height:900px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(91,42,149,0.18), transparent 65%);
+    pointer-events:none;
+  }
+  .about-inner{
+    position:relative;
+    max-width:1040px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .about .eyebrow{ margin-bottom:16px; }
+  .about-title{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    margin-bottom:22px;
+  }
+  .about-text{
+    max-width:640px;
+    margin:0 auto 64px;
+    font-size:16px;
+    line-height:1.7;
+    color:var(--chrome-mid);
+  }
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:1px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    overflow:hidden;
+  }
+  .feature{
+    background:var(--bg-soft);
+    padding:32px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    transition:background .25s;
+  }
+  .feature:hover{ background:rgba(155,93,229,0.06); }
+  .feature-icon{
+    width:44px; height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:linear-gradient(135deg, rgba(155,93,229,0.18), rgba(192,132,252,0.05));
+    border:1px solid rgba(155,93,229,0.3);
+    color:var(--violet-glow);
+  }
+  .feature-icon svg{ width:20px; height:20px; }
+  .feature-label{
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--chrome-light);
+  }
 </style>
 </head>
 <body>
+
+<!-- ================= NOTICIAS (popup, sale en cada visita) ================= -->
+<div class="news-overlay" id="newsOverlay">
+  <div class="news-card">
+    <div class="news-media">
+      <span class="news-version">v2.4</span>
+      <button class="news-close" id="newsClose" aria-label="Cerrar anuncio">&times;</button>
+    </div>
+    <div class="news-body">
+      <h2 class="news-title" id="newsTitle">Nuevo VIP</h2>
+      <ul class="news-list" id="newsList">
+        <li>Nuevo escenario</li>
+        <li>8 canciones agregadas</li>
+        <li>Nuevo sistema DJ</li>
+        <li>Correccion de bugs</li>
+      </ul>
+      <div class="news-footer">
+        <div class="news-dots" id="newsDots"></div>
+        <button class="news-enter" id="newsEnter">Entrar al sitio</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="hero">
   <video class="hero-video" autoplay muted loop playsinline poster="">
@@ -335,7 +570,7 @@
 
   <div class="stat">
     <span class="stat-dot"></span>
-    0+ jugadores en la fiesta XD falta poner
+    5K+ jugadores en la fiesta
   </div>
 
   <div class="scroll-cue">
@@ -343,6 +578,85 @@
     <div class="scroll-line"></div>
   </div>
 </section>
+
+<!-- ================= SOBRE EL SALON ================= -->
+<section class="about" id="sobre">
+  <div class="about-inner">
+    <p class="eyebrow">Sobre el salon</p>
+    <h2 class="about-title">Que es Sandeo?</h2>
+    <p class="about-text">Sandeo es un salon de fiestas moderno donde podras bailar, conocer gente, escuchar musica, participar en eventos exclusivos y disfrutar de conciertos organizados por nuestro staff.</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v10.5a3 3 0 1 1-2-2.83V3h2Z"/><path d="M17 8c1.5 0 2.5 1.5 2.5 3"/></svg>
+        </div>
+        <span class="feature-label">Musica en vivo</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3.5 20c.5-3 2.7-5 5.5-5s5 2 5.5 5"/><path d="M14.5 20c.3-2.2 1.7-3.7 3.5-4"/></svg>
+        </div>
+        <span class="feature-label">Conoce gente</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20c1-4 4.5-6 8-6s7 2 8 6"/><path d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+        </div>
+        <span class="feature-label">Baila sin parar</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 2.6 6.2 6.4.6-5 4.4 1.6 6.3L12 16.8 6.4 19.5 8 13.2l-5-4.4 6.4-.6L12 2Z"/></svg>
+        </div>
+        <span class="feature-label">Eventos exclusivos</span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+        </div>
+        <span class="feature-label">Conciertos del staff</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ---- NOTICIAS: datos de los anuncios (agrega mas objetos para mas paginas) ----
+  const NEWS = [
+    {
+      version: "v2.4",
+      title: "Nuevo VIP",
+      items: ["Nuevo escenario", "8 canciones agregadas", "Nuevo sistema DJ", "Correccion de bugs"]
+    }
+  ];
+
+  let newsIndex = 0;
+  const overlay = document.getElementById("newsOverlay");
+  const titleEl = document.getElementById("newsTitle");
+  const versionEl = document.querySelector(".news-version");
+  const listEl = document.getElementById("newsList");
+  const dotsEl = document.getElementById("newsDots");
+
+  function renderNews(i){
+    const n = NEWS[i];
+    versionEl.textContent = n.version;
+    titleEl.textContent = n.title;
+    listEl.innerHTML = n.items.map(t => `<li>${t}</li>`).join("");
+    dotsEl.innerHTML = NEWS.map((_, idx) =>
+      `<button class="news-dot ${idx === i ? 'active' : ''}" data-i="${idx}" aria-label="Anuncio ${idx+1}"></button>`
+    ).join("");
+    dotsEl.querySelectorAll(".news-dot").forEach(dot => {
+      dot.addEventListener("click", () => { newsIndex = +dot.dataset.i; renderNews(newsIndex); });
+    });
+  }
+  renderNews(newsIndex);
+
+  function closeNews(){ overlay.classList.add("hidden"); }
+  document.getElementById("newsClose").addEventListener("click", closeNews);
+  document.getElementById("newsEnter").addEventListener("click", closeNews);
+  overlay.addEventListener("click", (e) => { if(e.target === overlay) closeNews(); });
+</script>
 
 </body>
 </html>
