@@ -10,7 +10,10 @@
   grid.innerHTML = SHOP_ITEMS.map((item, i) => `
     <div class="simple-card" data-i="${i}">
       <div class="simple-card-img" style="background-image:url('${item.image}')"></div>
-      <div class="simple-card-name">${item.name}</div>
+      <div class="simple-card-body">
+        <div class="simple-card-name">${item.name}</div>
+        <span class="simple-card-btn">Ver mas &rarr;</span>
+      </div>
     </div>
   `).join("");
 
