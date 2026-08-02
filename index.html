@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/detail-modal.css">
 </head>
 <body>
 
@@ -133,12 +134,7 @@
     <h2>Quienes hacen Sandeo</h2>
     <p>El equipo detras del salon, organizado por categorias.</p>
   </div>
-
-  <p class="subgroup-label">Founders</p>
-  <div class="founders-grid" id="foundersGrid"></div>
-
-  <p class="subgroup-label">Administracion</p>
-  <div class="admins-list" id="adminsList"></div>
+  <div class="cover-grid" id="teamGrid"></div>
 </section>
 
 <!-- ================= ALIANZAS ================= -->
@@ -161,7 +157,23 @@
   <div class="shop-grid" id="shopGrid"></div>
 </section>
 
+<!-- ================= MODAL DE DETALLE (reutilizable) ================= -->
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-card">
+    <button class="detail-close" id="detailClose" aria-label="Cerrar">&times;</button>
+    <div class="detail-cover" id="detailCover"></div>
+    <div class="detail-body">
+      <h2 class="detail-title" id="detailTitle"></h2>
+      <p class="detail-meta" id="detailMeta"></p>
+      <p class="detail-desc" id="detailDesc"></p>
+      <div class="detail-members" id="detailMembers"></div>
+      <div id="detailCtaWrap"></div>
+    </div>
+  </div>
+</div>
+
 <script src="assets/news.js"></script>
+<script src="assets/detail-modal.js"></script>
 <script src="assets/team-data.js"></script>
 <script src="assets/team.js"></script>
 <script src="assets/alliances-data.js"></script>
