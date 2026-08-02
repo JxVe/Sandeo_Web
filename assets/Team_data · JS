@@ -13,13 +13,13 @@ const FOUNDERS_GROUP = {
   desc: "Conoce a los creadores y lideres de Sandeo Club.",
   members: [
     {
-      image: "https://placehold.co/200x200/2a1a3a/c084fc?text=JV",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10",
       name: "Jave",
       role: "Owner & Founder",
       desc: "Fundador del proyecto, a cargo de la direccion general de Sandeo."
     },
     {
-      image: "https://placehold.co/200x200/2a1a3a/c084fc?text=GR",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10",
       name: "Gerardo",
       role: "Owner & Founder",
       desc: "Co-fundador, encargado del desarrollo del juego y del salon."
@@ -32,10 +32,10 @@ const ADMINS_GROUP = {
   title: "Administracion",
   desc: "Nuestro equipo de administracion trabajando para la comunidad.",
   members: [
-    { image: "https://placehold.co/200x200/241830/9b5de5?text=A1", name: "Admin 1", role: "Administrador" },
-    { image: "https://placehold.co/200x200/241830/9b5de5?text=A2", name: "Admin 2", role: "Administrador" },
-    { image: "https://placehold.co/200x200/241830/9b5de5?text=M1", name: "Moderador 1", role: "Moderador" },
-    { image: "https://placehold.co/200x200/241830/9b5de5?text=M2", name: "Moderador 2", role: "Moderador" },
-    { image: "https://placehold.co/200x200/241830/9b5de5?text=M3", name: "Moderador 3", role: "Moderador" }
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10", name: "Hann", role: "Administrador" },
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10", name: "Mar", role: "Administrador" },
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10", name: "Kitkat 1", role: "Moderador" },
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10", name: "Flor", role: "Moderador" },
+    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzqQ40hg4CHDGcW3nzo60xZV6qYFeHFaYdS0Vdw3tYMA&s=10", name: "Reclutando...", role: "Moderador" }
   ]
 };
