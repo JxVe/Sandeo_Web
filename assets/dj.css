@@ -1,1 +1,168 @@
+/* =========================================================
+   ZONA DJ — estilos propios de dj.html
+   ========================================================= */
 
+.dj-page{
+  min-height:100vh;
+  padding:120px 6vw 100px;
+  position:relative;
+  overflow:hidden;
+}
+.dj-page::before{
+  content:'';
+  position:absolute;
+  top:-10%; left:50%;
+  width:1000px; height:1000px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle, rgba(91,42,149,0.16), transparent 65%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+.dj-header{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 56px;
+}
+.dj-header .eyebrow{ margin-bottom:14px; }
+.dj-header h1{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(1.9rem, 3.6vw, 2.7rem);
+  margin-bottom:14px;
+}
+.dj-header p{
+  color:var(--chrome-mid);
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* ---------- VISTA 1: tarjetas de categorias ---------- */
+.dj-categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+  max-width:1040px;
+  margin:0 auto;
+}
+
+.dj-card{
+  position:relative;
+  height:200px;
+  border-radius:18px;
+  overflow:hidden;
+  cursor:pointer;
+  border:1px solid rgba(255,255,255,0.08);
+  background:#0b0b12;
+  transition:transform .3s ease, border-color .3s ease;
+}
+.dj-card:hover{ transform:translateY(-4px); border-color:var(--card-color, var(--violet-glow)); }
+
+.dj-card::before{
+  content:'';
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 30% 110%, color-mix(in srgb, var(--card-color, #9b5de5) 55%, transparent), transparent 70%),
+    linear-gradient(160deg, #14141c, #060609);
+  transition:transform .5s ease;
+}
+.dj-card:hover::before{ transform:scale(1.08); }
+
+.dj-card-name{
+  position:absolute;
+  left:20px; bottom:18px;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:22px;
+  z-index:1;
+}
+.dj-card-count{
+  position:absolute;
+  right:18px; top:16px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:0.1em;
+  color:var(--chrome-mid);
+  background:rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.14);
+  padding:4px 10px;
+  border-radius:999px;
+  z-index:1;
+}
+
+/* ---------- VISTA 2: lista de canciones ---------- */
+.dj-songs-view{ display:none; max-width:760px; margin:0 auto; }
+.dj-songs-view.active{ display:block; }
+.dj-categories.hidden{ display:none; }
+
+.dj-back{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--chrome-mid);
+  background:none;
+  border:none;
+  cursor:pointer;
+  margin-bottom:24px;
+  transition:color .2s;
+}
+.dj-back:hover{ color:var(--violet-glow); }
+
+.dj-songs-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:26px;
+  margin-bottom:24px;
+}
+.dj-songs-dot{
+  width:12px; height:12px;
+  border-radius:50%;
+  background:var(--card-color, var(--violet-glow));
+  box-shadow:0 0 12px var(--card-color, var(--violet-glow));
+}
+
+.song-row{
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  align-items:center;
+  gap:16px;
+  padding:16px 18px;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  margin-bottom:10px;
+  background:rgba(255,255,255,0.02);
+}
+.song-name{ font-weight:600; font-size:14.5px; }
+.song-dj{
+  font-family:var(--font-mono);
+  font-size:12px;
+  color:var(--chrome-mid);
+  white-space:nowrap;
+}
+.song-copy{
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:12.5px;
+  color:var(--chrome-light);
+  background:rgba(155,93,229,0.12);
+  border:1px solid rgba(155,93,229,0.35);
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:background .2s, transform .2s;
+}
+.song-copy:hover{ background:rgba(155,93,229,0.28); }
+.song-copy.copied{ background:var(--violet); border-color:var(--violet); color:#fff; }
+
+@media (max-width:560px){
+  .song-row{ grid-template-columns:1fr; text-align:left; gap:8px; }
+  .song-copy{ width:100%; text-align:center; }
+}
