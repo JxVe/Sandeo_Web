@@ -1,29 +1,26 @@
 /* =========================================================
    TIENDA — datos editables
-   Modifica nombre, descripcion, color, icono o el link de
-   "Comprar en Roblox" (campo link) de cada producto aqui.
-
-   Iconos disponibles: crown, gem, headphones, tag, sparkles,
-   terminal, ghost, radio, dance
+   image: URL de la imagen del gamepass/objeto.
+   Para agregar o quitar un producto, copia/borra un bloque.
    ========================================================= */
 
 const SHOP_ITEMS = [
-  { id: "vip", name: "VIP", icon: "crown", color: "#c084fc",
+  { image: "https://placehold.co/400x400/1a1024/c084fc?text=VIP", name: "VIP",
     desc: "Acceso a la zona VIP y beneficios dentro del salon.", link: "#" },
-  { id: "super-vip", name: "Super VIP", icon: "gem", color: "#9b5de5",
+  { image: "https://placehold.co/400x400/1a1024/9b5de5?text=Super+VIP", name: "Super VIP",
     desc: "Todo lo de VIP, mas beneficios exclusivos adicionales.", link: "#" },
-  { id: "dj-pass", name: "DJ Pass", icon: "headphones", color: "#4cc9f0",
+  { image: "https://placehold.co/400x400/1a1024/4cc9f0?text=DJ+Pass", name: "DJ Pass",
     desc: "Sube a la tarima y controla la musica del salon.", link: "#" },
-  { id: "name-tag", name: "Name Tag", icon: "tag", color: "#e0546b",
+  { image: "https://placehold.co/400x400/1a1024/e0546b?text=Name+Tag", name: "Name Tag",
     desc: "Personaliza la etiqueta con tu nombre en el juego.", link: "#" },
-  { id: "aura", name: "Aura", icon: "sparkles", color: "#f77f00",
+  { image: "https://placehold.co/400x400/1a1024/f77f00?text=Aura", name: "Aura",
     desc: "Efecto de aura visual alrededor de tu personaje.", link: "#" },
-  { id: "comandos", name: "Comandos", icon: "terminal", color: "#4cc9f0",
+  { image: "https://placehold.co/400x400/1a1024/4cc9f0?text=Comandos", name: "Comandos",
     desc: "Desbloquea comandos especiales dentro del salon.", link: "#" },
-  { id: "hl", name: "HL", icon: "ghost", color: "#9b5de5",
+  { image: "https://placehold.co/400x400/1a1024/9b5de5?text=HL", name: "HL",
     desc: "Modelo headless (sin cabeza) para tu personaje.", link: "#" },
-  { id: "radio", name: "Radio", icon: "radio", color: "#c084fc",
+  { image: "https://placehold.co/400x400/1a1024/c084fc?text=Radio", name: "Radio",
     desc: "Reproduce tu musica favorita donde quieras.", link: "#" },
-  { id: "bailes", name: "Bailes Exclusivos", icon: "dance", color: "#e0546b",
+  { image: "https://placehold.co/400x400/1a1024/e0546b?text=Bailes", name: "Bailes Exclusivos",
     desc: "Animaciones de baile unicas para destacar.", link: "#" }
 ];
