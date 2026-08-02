@@ -7,14 +7,22 @@
   const grid = document.getElementById("alliancesGrid");
   if(!grid) return;
 
-  grid.innerHTML = ALLIANCES.map(a => `
-    <div class="alliance-card">
-      <div class="alliance-logo">${a.initials}</div>
-      <div>
-        <div class="alliance-name">${a.name}</div>
-        <div class="alliance-meta">${a.members}</div>
-      </div>
-      <span class="alliance-tag">Alianza VIP</span>
+  grid.innerHTML = ALLIANCES.map((a, i) => `
+    <div class="simple-card" data-i="${i}">
+      <div class="simple-card-img" style="background-image:url('${a.logo}')"></div>
+      <div class="simple-card-name">${a.name}</div>
     </div>
   `).join("");
+
+  grid.querySelectorAll(".simple-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const a = ALLIANCES[+card.dataset.i];
+      openDetailModal({
+        image: a.logo,
+        title: a.name,
+        meta: a.members,
+        desc: a.desc
+      });
+    });
+  });
 })();
